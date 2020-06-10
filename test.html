@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		elems=[
+		{nume: "Andreea", prenume:"Vlad"},
+		{nume:"Ioana", prenume:"Mara"},
+		{nume: "Sara", prenume:"Carla"}
+		]
+		function add(elems){
+		   var list=document.createElement("ul");
+		   document.body.appendChild(list)
+           for(var i=0;i<elems.length;i++){
+           	  var li=document.createElement("li");
+           	  li.innerHTML=elems[i].nume+" "+elems[i].prenume
+           	  list.appendChild(li)
+           }
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="nume"/>
+	<input type="text" id="valoare"/>
+	<input type="button" id="btn" value="Add" onclick="add(elems)"/>
+	<div>
+	<table id="tab">
+	</table>
+</div>
+	</body>
+</html>
